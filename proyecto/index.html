@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVerify - Valida tus Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>EcoVerify</h1>
+        <p>Valida los componentes de tus productos de manera eficiente y precisa</p>
+    </header>
+
+    
+    <main>
+        <section>
+            <header>
+                <h2>Valida tu Producto</h2>
+            </header>
+            <form action="/validar" method="POST" style="display: flex; flex-direction: column; gap: 1em;">
+                <!-- Nombre del Producto -->
+                <div style="display: flex; align-items: center; gap: 1em;">
+                    <label for="nombre-producto" style="flex-shrink: 0;">Nombre del Producto:</label>
+                    <input type="text" id="nombre-producto" name="nombre_producto" placeholder="Ingrese el nombre del producto" required style="flex-grow: 1;">
+                    <button type="submit">Validar Producto</button>
+                </div>
+
+                <!-- Barras -->
+                <div>
+                    <label for="componentes-buenos">Componentes Buenos:</label>
+                    <progress id="componentes-buenos" value="0" max="100" style="width: 100%;"></progress>
+                </div>
+
+                <div>
+                    <label for="componentes-malos">Componentes Malos:</label>
+                    <progress id="componentes-malos" value="0" max="100" style="width: 100%;"></progress>
+                </div>
+
+                
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Deje un comentario opcional..."></textarea>
+
+                
+                <div>
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+                <!-- Botón Limpiar -->
+                <button type="reset">borrar</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 EcoVerify. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
